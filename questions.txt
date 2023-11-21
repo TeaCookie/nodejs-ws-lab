@@ -1,0 +1,18 @@
+1. A bunny which you can drag around, opening another browser will display the bunny in the same position as in the first window.
+2. TypeScript is statically typed and JavaScript is dynamically typed. And since TypeScript is static you can catch errors before runtime.
+But TypeScript needs to be complied into JavaScript before runtime.
+TypeScript is a superset of JavaScript, any valid JavaScript will be valid TypeScript  
+3. Web application bundlers optimize the performance, maintainability, and portability of their web applications.
+ParcelJS has many features out of the box with no setup, it includes a development server. It automatically installs dependencies for you.
+And it allows for hot reloading. And apparently automatically optimizes the whole project.
+4. 
+0 Connecting: When a websocket is created it is in the connecting state, the connection is being set up, and the websocket is not yet open.
+1 Open: WebSocket connection is open and ready for communication. send(), onmessage methods can be used
+2 Closing: the WebSocket connection is in the process of being closed. close() will start the closing handshake.
+3 Closed: WebSocket connection has been successfully closed or the connection didn't work in the first place.
+5. https://github.com/TeaCookie/nodejs-ws-lab.git
+
+
+
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
