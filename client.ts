@@ -38,12 +38,15 @@ function uuid(
 class GameScene extends Phaser.Scene {
   private HOST = window.location.hostname; // localhost and 127.0.0.1 handled
   private PORT = 8080; // change this if needed
-
-  private id = uuid();
-  private players: {[key: string]: Phaser.GameObjects.Sprite} = {};
   private VELOCITY = 100;
   private wsClient?: WebSocket;
-  private sprite?: Phaser.GameObjects.Sprite;
+  private id = uuid();
+  private players: {[key: string]: Phaser.GameObjects.Sprite} = {};
+  
+  private leftKey?: Phaser.Input.Keyboard.Key;
+  private rightKey?: Phaser.Input.Keyboard.Key;
+  private upKey?: Phaser.Input.Keyboard.Key;
+  private downKey?: Phaser.Input.Keyboard.Key;
 
   constructor() { super({ key: "GameScene" }); }
 
