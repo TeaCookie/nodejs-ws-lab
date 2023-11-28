@@ -54,8 +54,13 @@ class GameScene extends Phaser.Scene {
    * Load the assets required by the scene
    */
   public preload() {
-    this.load.image("bunny", "static/bunny.png");
+    this.load.tilemapCSV("map", "static/level_map.csv");
+    this.load.image("tiles", "static/tiles_16.png");
+    this.load.spritesheet("player", "static/spaceman.png", {
+      frameWidth: 16, frameHeight: 16
+    });
   }
+
 
   /**
    * Instantiate the private variables required by the scene
@@ -206,8 +211,14 @@ const config: GameConfig = {
   type: Phaser.AUTO,
   width: 800,
   height: 500,
-  scene: [GameScene]
-};
+  scene: [GameScene],
+  input: { keyboard: true },
+  physics: {
+    default: "arcade",
+    arcade: { debug: DEBUG }
+  },
+  render: { pixelArt: true, antialias: false }
+}
 
 class LabDemoGame extends Phaser.Game {
   constructor(config: GameConfig) {
